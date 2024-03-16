@@ -11,12 +11,11 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_margin="5dp"
-        android:layout_marginTop="16dp"
         android:onClick="abrirGaleria"
         android:text="Galería"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/btCamera"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/btCamera"
@@ -27,33 +26,32 @@
         android:text="Cámara"
         app:layout_constraintLeft_toRightOf="@+id/btGallery"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="5dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="398dp"
-        android:layout_height="490dp"
+        android:layout_width="389dp"
+        android:layout_height="290dp"
         android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txtresults"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btGallery"
-        app:layout_constraintVertical_bias="0.08"
+        app:layout_constraintVertical_bias="0.384"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/txtresults"
-        android:layout_width="393dp"
-        android:layout_height="95dp"
+        android:layout_width="153dp"
+        android:layout_height="236dp"
         android:layout_margin="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
-        android:text="Resultados:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button"
@@ -62,12 +60,35 @@
         android:layout_marginStart="157dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="140dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="5dp"
         android:onClick="PersonalizedModel"
         android:text="Bandera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+        app:layout_constraintTop_toBottomOf="@+id/txtresults"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imgBandera"
+        android:layout_width="212dp"
+        android:layout_height="201dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:text="Resultados:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
